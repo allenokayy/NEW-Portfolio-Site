@@ -1,0 +1,110 @@
+/* fixing accordian buttons */
+
+html {
+    max-width: 100%;
+}
+
+h3 {
+    font-size: 1rem;
+    font-weight: normal;
+    color: white;
+    -webkit-text-stroke: unset;
+    paint-order: normal;
+    margin: 2rem auto 1rem auto;
+}
+
+button {
+    background-color: transparent;
+    border-radius: 0%;
+    font-weight: bold;
+    display: block;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    -webkit-text-stroke: 7px var(--dark-blue);
+    paint-order: stroke fill;
+    margin: 0 auto;
+    transition: all 0.2s ease-in-out;
+}
+
+/* .active, button:hover {
+    cursor: pointer;
+    color: var(--purple);
+    filter: drop-shadow(3px 3px 0 var(--light-blue));
+} */
+
+
+.inside {
+    background-image: url(images/mobile/mobilegalscroll.png);
+    background-size: cover;
+    max-width: 100vw;
+    /* max-height: 0;
+    overflow: hidden; */
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 3rem;
+}
+
+.inside p {
+    min-width: 100%;
+    padding: 2rem 2rem 1rem 2rem;
+    color: var(--dark-blue);
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+
+.inside span {
+    display: block;
+    margin: 0 auto;
+    max-width: 80%;
+    transition: all 0.2s ease-in-out;
+}
+
+.inside img {
+    max-width: 300px;
+    max-height: 300px;
+    margin: 10px;
+    border: 3px solid var(--dark-blue);
+    border-radius: 5%;
+    transition: all 0.2s ease-in-out;
+}
+
+.inside .horizontal {
+    max-width: 400px;
+    max-height: 400px;
+}
+
+/* .active {
+    max-height: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.active div {
+    padding-bottom: 3rem;
+} */
+
+@media screen and (width > 550px) {
+    
+    .inside {
+        background-image: url(images/desktop/DesktopDMgalbg.png);
+    }
+
+    .inside p {
+        padding-top: 4rem;
+        max-width: 90%;
+    }
+
+}
+
+@media screen and (width > 639px) {
+
+.inside .rectangle {
+        height: 180px;
+        margin-top: 60px;
+    }
+
+}

@@ -1,0 +1,474 @@
+/* import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* end of reset */
+
+/* start of my code */
+
+/* basic styles */
+
+:root {
+    --dark-blue: #191f62;
+    --light-blue: #4b59f2;
+    --purple: #e1bbff;
+    --yellow: #fbe17e;
+}
+
+html {
+    font-family: "Montserrat", Helvetica, sans-serif;
+    background-color: var(--dark-blue);
+    font-size: 12pt;
+}
+
+body {
+    background-image: url("images/mobile/mobileBG.png");
+    background-size: 100%;
+}
+
+h1 {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    -webkit-text-stroke: 10px var(--dark-blue);
+    paint-order: stroke fill;
+}
+
+h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    -webkit-text-stroke: 7px var(--dark-blue);
+    paint-order: stroke fill;
+}
+
+button {
+    font-family: "Montserrat", Helvetica, sans-serif;
+}
+
+/* hamburger menu, 
+credit: based on rosalieelphick url: https://codepen.io/rosalieelphick/pen/xJyRoK */
+
+.hamburger {
+    position: fixed;
+    opacity: 0;
+    cursor: pointer;
+    margin: auto auto;
+    top: 5px;
+    left: 5px;
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border: 0;
+    z-index: 10001;
+}
+
+#line1,
+#line2,
+#line3 {
+    position: fixed;
+    left: 25%;
+    padding: 0;
+    width: 32px;
+    height: 5px;
+    display: block;
+    border-radius: 4px;
+    background-color: var(--dark-blue);
+    transition: all 0.2s ease-out;
+}
+
+#line1 {
+    top: 18px;
+}
+
+#line2 {
+    top: 27px;
+}
+
+#line3 {
+    top: 36px;
+}
+
+#hammedburger {
+    position: fixed;
+    height: 60px;
+    width: 60px;
+    top: 5%;
+    left: 10%;
+    z-index: 1000;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.2s ease-in-out;
+    background-color: white;
+    transform: scale(1.2);
+}
+
+/* hover */
+
+#hammedburger:hover {
+    background-color: var(--purple);
+    filter: drop-shadow(3px 3px 0 var(--light-blue));
+}
+
+#hammedburger:hover #line1,
+#hammedburger:hover #line2,
+#hammedburger:hover #line3 {
+    background-color: white;
+}
+
+/* checked - transform button */
+
+#line1 {
+    transform-origin: 19%;
+}
+
+#line3 {
+    transform-origin: 19%;
+}
+
+#hamburger:checked+label>#line1 {
+    transform: rotate(45deg);
+    width: 42px;
+    left: 23%;
+}
+
+#hamburger:checked+label>#line2 {
+    transform: rotate(45deg);
+    background-color: transparent;
+}
+
+#hamburger:checked+label>#line3 {
+    transform: rotate(-45deg);
+    width: 42px;
+    left: 23%;
+}
+
+
+/* logo styles */
+
+#logo {
+    width: 25rem;
+    margin: 10rem auto 3rem auto;
+}
+
+#logo a,
+.logoImg {
+    width: 25rem;
+}
+
+/* two image styles */
+
+#hover {
+    display: none;
+}
+
+#logo:hover #top {
+    display: none;
+    position: absolute;
+}
+
+#logo:hover #hover {
+    display: block;
+}
+
+/* nav styles */
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    transition: all 0.1s ease-out;
+}
+
+nav a:hover {
+    color: var(--purple);
+    filter: drop-shadow(3px 3px 0 var(--light-blue));
+}
+
+/* mobile hamburger nav styles */
+
+nav {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    padding: 0 0 100vh 100vw;
+    display: flex;
+    flex-direction: column;
+    background-image: url("images/mobile/mobileBG.png");
+    left: -1100px;
+    transition: left 0.4s ease-in-out;
+    z-index: 10;
+}
+
+nav ul {
+    position: absolute;
+    left: 32%;
+    top: 20%;
+}
+
+nav li {
+    margin: 4rem 0;
+}
+
+nav li a {
+    font-size: 3rem;
+}
+
+footer {
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+/* media queries */
+/* general for now since like. nya */
+
+@media screen and (width > 550px) {
+    body {
+        background-image: url("images/desktop/DesktopDMBG.png");
+        background-size: 300%;
+    }
+
+    /* hamburger b gone */
+
+    #hammedburger {
+        display: none;
+    }
+
+    /* logo styles */
+
+    #logo {
+        width: 25rem;
+        margin: 2rem auto 2rem auto;
+    }
+
+    #logo a,
+    .logoImg {
+        width: 25rem;
+    }
+
+    /* new nav */
+
+    nav {
+        background-image: none;
+        left: 0;
+        padding: 0;
+        display: block;
+        position: relative;
+    }
+
+    nav ul {
+        position: relative;
+        top: 0;
+        left: 0; 
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    nav li {
+        margin: 0 1rem 3rem 1rem;
+    }
+
+    nav li a{
+        font-size: 2rem;
+        -webkit-text-stroke: 7px var(--dark-blue);
+        paint-order: stroke fill;
+    }
+
+}
+
+@media screen and (width > 750px) {
+    body {
+        background-image: url("images/desktop/DesktopDMBG.png");
+        background-size: 250%;
+    }
+
+}
+
+@media screen and (width > 1080px) {
+    body {
+        background-image: url("images/desktop/DesktopDMBG.png");
+        background-size: 150%;
+    }
+
+    /* logo styles */
+
+    #logo {
+        width: 20rem;
+        margin: 2rem 0 2rem 2rem;
+    }
+
+    #logo a,
+    .logoImg {
+        width: 20rem;
+    }
+
+    /* new nav */
+
+    nav {
+        margin-top: -5rem;
+    }
+
+    nav ul {
+        justify-content: end;
+    }
+
+    nav li {
+        margin: 0 2rem 3rem 0;
+    }
+
+    nav li a{
+        font-size: 2rem;
+    }
+
+}
+
+@media screen and (width >=1300px) {
+    body {
+        background-image: url("images/desktop/DesktopDMBG.png");
+        background-size: 100%;
+    }
+}
