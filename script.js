@@ -29,19 +29,23 @@ window.addEventListener('resize', () => {
   }
 });
 
-// accordion menu. followed W3schools tutorial for this
 
-var acc = document.getElementsByClassName("accordion");
-var i;
+// home page buttons 
 
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    }
-  });
-}
+const backButton = document.getElementById("backbutton");
+const frontButton = document.getElementById("forwardbutton");
+const scrollGal = document.getElementById("galTop");
+
+backButton.onclick = function () {
+    scrollGal.scrollBy({
+        left: -400,
+        behavior: "smooth"
+    });
+};
+
+frontButton.onclick = function () {
+    scrollGal.scrollBy({
+        left: 400,
+        behavior: "smooth"
+    });
+};

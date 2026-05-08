@@ -1,0 +1,60 @@
+body {
+    min-height: 100dvh;
+}
+
+h2 {
+    padding-bottom: 2rem;
+}
+
+#contact {
+    padding: 2rem 0;
+    background-image: url(../images/mobile/mobilegalscroll.png);
+    background-size: cover;
+}
+
+#flex {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 90%;
+}
+
+#flex p {
+    font-weight: 450;
+    color: var(--dark-blue);
+    text-align: center;
+    margin: 10px;
+}
+
+#flex a {
+    color: var(--dark-blue);
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+
+#flex a:hover {
+    color: var(--purple);
+    -webkit-text-stroke: 7px var(--dark-blue);
+    paint-order: stroke fill;
+}
+
+.social {
+    width: 70px;
+    transition: all 0.2s ease-in-out;
+}
+
+.social:hover {
+    filter: drop-shadow(3px 3px 0 var(--purple));
+}
+
+@media screen and (width > 750px) {
+
+    #contact {
+        background-image: url(../images/desktop/DesktopDMgalbg.png);
+    }
+
+
+}

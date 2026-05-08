@@ -1,0 +1,109 @@
+/* gallery styles */
+/* scrolling gallery based on Lety's code. URL: https://stackoverflow.com/a/63454409 */
+
+body {
+    min-height: 100dvh;
+}
+
+h2, h3 {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+}
+
+#scrolling {
+    overflow: scroll;
+    scroll-behavior: smooth;
+    position: relative;
+}
+
+/* button styles */
+
+button {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    z-index: 7;
+    top: 40%;
+    transition: all 0.2s ease-in;
+}
+
+#forwardbutton {
+    left: 80%;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#backreg, #forwardreg, #backhover, #forwardhover {
+    transition: all 0.2s ease-in;
+}
+
+button:hover #backreg, button:hover #forwardreg {
+    opacity: 0;
+}
+
+button:hover #backhover, button:hover #forwardhover {
+    filter: drop-shadow(3px 3px 0 var(--light-blue));
+}
+
+button img {
+    position: absolute;
+    width: 70px;
+}
+
+/* more scrolling */
+
+.scrollingGal {
+    background-image: url('../images/desktop/DesktopDMgalbg.png');
+    background-size: cover;
+    position: relative;
+    display: flex;
+    height: 500px;
+    width: auto;
+    overflow: scroll;
+    padding: 0 10%;
+}
+
+.scrollingGal img {
+    max-height: 350px;
+    margin: 4.5rem 4rem;
+    border: 5px solid var(--dark-blue);
+    border-radius: 5%;
+}
+
+.scrollingGal .rectangle {
+    border-radius: 10%;
+}
+
+/* media queries - size */
+
+@media screen and (width > 549px) {
+
+    #backbutton {
+    left: 5%;
+   }
+
+}
+
+
+@media screen and (width > 750px) {
+   
+    #forwardbutton {
+        left: 85%;
+    }
+    
+    .scrollingGal {
+        background-image: url('../images/desktop/DesktopDMgalbg.png');
+    }
+
+}
+
+@media screen and (width > 1080px) {
+
+#forwardbutton {
+        left: 90%;
+    }
+
+}

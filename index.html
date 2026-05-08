@@ -15,14 +15,14 @@
    <meta name="url" content="allenkaywork.com">
    <meta name="robots" content="noindex, nofollow">
    <!-- OG tags -->
-   <meta property="og:url" content="">
+   <meta property="og:url" content="www.allenkaywork.com">
    <meta property="og:type" content="article">
    <meta property="og:title" content="Allen's Portfolio">
    <meta property="og:description"
       content="Hi! My name is Allen Kay Jordan, and this is my portfolio site. Thanks for looking!">
    <!-- links -->
-   <link href="standard.css" type="text/css" rel="stylesheet">
-   <link href="home.css" type="text/css" rel="stylesheet">
+   <link href="CSS/standard.css" type="text/css" rel="stylesheet">
+   <link href="CSS/home.css" type="text/css" rel="stylesheet">
    <link href="images/logos/favicon.png" rel="icon" type="image/x-icon">
    <script src="script.js" defer></script>
 </head>
@@ -59,35 +59,29 @@
    </header>
    <main>
       <section id="scrolling">
-         <h2>Scrolling Images. Click on one to go to my portfolio!</h2>
-         <section id="scrollingGalTop">
-            <h3>Top Scrolling Image Gallery</h3>
-            <div class="scrollingGal" id="galTop">
-               <img src="images/portfolio pieces/frontTaafi.png" alt="front of a booklet with colorful circles adorning it. the text reads 'TAAFI industry conference 2024'" class="galImg">
-               <img src="images/portfolio pieces/taffiinside.png" alt="inside spread of the TAAFI booklet. one side is all pink while the other side has a similar circle motif to the front and text." class="galImg">
-               <img src="images/portfolio pieces/taafiinside2.png" alt="inside spread of the TAAFI booklet. there are many events listed on the pages." class="galImg">
-               <img src="images/portfolio pieces/frontTaafi.png" alt="front of a booklet with colorful circles adorning it. the text reads 'TAAFI industry conference 2024'" class="galImg">
-               <img src="images/portfolio pieces/taffiinside.png" alt="inside spread of the TAAFI booklet. one side is all pink while the other side has a similar circle motif to the front and text." class="galImg">
-               <img src="images/portfolio pieces/taafiinside2.png" alt="inside spread of the TAAFI booklet. there are many events listed on the pages." class="galImg">
-            </div>
-         </section>
-         <section id="scrollingGalBot">
-            <h3>Bottom Scrolling Image Gallery</h3>
-            <div class="scrollingGal" id="galBot">
-              <img src="images/portfolio pieces/openingimg.png" alt="picture of a collage of stickers with the text 'Nyaoming Shop Opening' over them.">
-                <img src="images/portfolio pieces/SHOPREOPENtime.png" alt="Picture showing a collage of illustrated posters and stickers with the text 'Nyaoming shop reopening' over the top of it">
-                <img src="images/portfolio pieces/stickercat.png" alt="picture with similar background to previous image showing 4 sticker designs with the caption '8cm vinyl stickers with matte finish'">
-                <img class="rectangle" src="images/portfolio pieces/back.png" alt="back of buisness card with the text 'Nyaoming 2d & 3d artist nyaoming.bigcartel.com' on it">
-                <img src="images/portfolio pieces/openingimg.png" alt="picture of a collage of stickers with the text 'Nyaoming Shop Opening' over them.">
-                <img src="images/portfolio pieces/SHOPREOPENtime.png" alt="Picture showing a collage of illustrated posters and stickers with the text 'Nyaoming shop reopening' over the top of it">
-                <img src="images/portfolio pieces/stickercat.png" alt="picture with similar background to previous image showing 4 sticker designs with the caption '8cm vinyl stickers with matte finish'">
-                <img class="rectangle" src="images/portfolio pieces/back.png" alt="back of buisness card with the text 'Nyaoming 2d & 3d artist nyaoming.bigcartel.com' on it">
-            </div>
-         </section>
+         <h2>Scrolling Gallery</h2>
+         <button id="backbutton"><img class="back" id="backhover" src="images/social_media/backbuttonhover.png"
+               alt="back button but purple"><img class="back" id="backreg" src="images/social_media/backbutton.png"
+               alt="back button">
+         </button>
+         <div class="scrollingGal" id="galTop">
+            <img class="rectangle" src="images/portfolio_pieces/PromoImageAdjusted.png"
+               alt="a promo image of three jars of honey, two with the tag 'bee zee bee' attached to them. the honey has orange, white and yellow flowers behind it, on a green backdrop.">
+            <img src="images/portfolio_pieces/openingimg.png"
+               alt="picture of a collage of stickers with the text 'Nyaoming Shop Opening' over them.">
+            <img src="images/portfolio_pieces/SHOPREOPENtime.png"
+               alt="Picture showing a collage of illustrated posters and stickers with the text 'Nyaoming shop reopening' over the top of it">
+            <img src="images/portfolio_pieces/frontTaafi.png"
+               alt="front of a booklet with colorful circles adorning it. the text reads 'TAAFI industry conference 2024'">
+         </div>
+         <button id="forwardbutton"><img class="forward" id="forwardhover"
+               src="images/social_media/forwardbuttonhover.png" alt="forward button but purple"><img class="forward"
+               id="forwardreg" src="images/social_media/forwardbutton.png" alt="forward button">
+         </button>
       </section>
    </main>
    <footer>
-      <small>Website &copy Allen Kay Jordan. All Rights Reserved.</small>
+      <small>Website &copy; Allen Kay Jordan. All Rights Reserved.</small>
    </footer>
 </body>
 
